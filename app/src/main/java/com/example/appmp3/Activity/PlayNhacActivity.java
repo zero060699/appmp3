@@ -328,7 +328,7 @@ public class PlayNhacActivity extends AppCompatActivity {
                     sktime.setProgress(mediaPlayer.getCurrentPosition());
                     SimpleDateFormat simpleDateFormat =new SimpleDateFormat("mm:ss");
                     txtTimesong.setText(simpleDateFormat.format(mediaPlayer.getCurrentPosition()));
-                    handler.postDelayed(this,3000);
+                    handler.postDelayed(this,300);
                     mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
@@ -350,12 +350,12 @@ public class PlayNhacActivity extends AppCompatActivity {
                 if (next == true){
                     if (position<(mangbaihat.size())){
                         imgplay.setImageResource(R.drawable.iconpause);
-                        position--;
-                        if (position < 0){
-                            position=mangbaihat.size()-1;
+                        position++;
+                        if(repeat == true){
+                            if (position == 0){
+                                position=mangbaihat.size();
                         }
-                        if (repeat==true){
-                            position +=1;
+                            position -=1;
                         }
                         if (checkrandom==true){
                             Random random =new Random();
@@ -364,6 +364,9 @@ public class PlayNhacActivity extends AppCompatActivity {
                                 position=index-1;
                             }
                             position=index;
+                        }
+                        if(position>(mangbaihat.size())-1){
+                            position=0;
                         }
 
                         new PlayMp3().execute(mangbaihat.get(position).getLinkbaihat());

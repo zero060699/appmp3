@@ -30,11 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <SeekBar
-            android:id="@+id/seekbarsong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="9" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -52,7 +47,11 @@
                 android:textColor="#ffff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-
+            <SeekBar
+                android:id="@+id/seekbarsong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9" />
             <TextView
                 android:textStyle="bold"
                 android:textSize="16sp"
@@ -63,11 +62,13 @@
                 android:textColor="#ffff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
+
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -76,7 +77,7 @@
                 android:scaleType="fitXY"
                 android:background="@null"
                 android:id="@+id/imagebuttonsuffle"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"/>
             <ImageButton
@@ -84,7 +85,7 @@
                 android:scaleType="fitXY"
                 android:background="@null"
                 android:id="@+id/imagebuttonpre"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="60dp"
                 android:layout_height="60dp"/>
             <ImageButton
@@ -92,7 +93,7 @@
                 android:scaleType="fitXY"
                 android:background="@null"
                 android:id="@+id/imagebuttonplay"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="70dp"
                 android:layout_height="70dp"/>
             <ImageButton
@@ -100,17 +101,18 @@
                 android:scaleType="fitXY"
                 android:background="@null"
                 android:id="@+id/imagebuttonnext"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="60dp"
                 android:layout_height="60dp"/>
+
             <ImageButton
-                android:src="@drawable/iconrepeat"
-                android:scaleType="fitXY"
-                android:background="@null"
                 android:id="@+id/imagebuttonrepeat"
-                android:layout_marginRight="15dp"
                 android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_height="70dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/iconrepeat" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
